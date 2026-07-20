@@ -1,0 +1,58 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.jamf.com/jamf-pro/docs/client-credentials
+docs:
+- https://developer.jamf.com/jamf-pro/docs/jamf-pro-api-overview
+- https://developer.jamf.com/jamf-pro/docs/client-credentials
+summary:
+  types: [http, oauth2]
+  http_schemes: [bearer, basic]
+  oauth2_flows: [clientCredentials]
+  model: >-
+    Jamf Pro uses short-lived bearer tokens. Tokens are obtained either from
+    user credentials (basic auth) or, since Jamf Pro 10.49.0, from OAuth
+    client-credential API Clients. Authorization is governed by API Roles
+    (collections of privileges) rather than OAuth scopes.
+schemes:
+- name: BearerToken
+  type: http
+  scheme: bearer
+  description: >-
+    Request a token with POST /api/v1/auth/token using basic auth (user
+    account + password). The response returns a token and expiration; send it
+    as `Authorization: Bearer <token>`. Tokens expire after ~20 minutes and
+    can be renewed with POST /api/v1/auth/keep-alive. Invalidate with
+    POST /api/v1/auth/invalidate-token.
+  token_url: /api/v1/auth/token
+  keep_alive_url: /api/v1/auth/keep-alive
+  ttl_minutes: 20
+- name: ClientCredentials
+  type: oauth2
+  flow: clientCredentials
+  description: >-
+    Since Jamf Pro 10.49.0. Create an API Client (client id + secret) and
+    assign it one or more API Roles. Exchange the client id/secret for an
+    access token scoped exclusively to Jamf Pro APIs, protecting admin UI
+    credentials. Adding/removing an API Role requires client-secret rotation
+    to take effect; adding/removing a privilege on a role takes effect for
+    new tokens immediately.
+  authorization_model: api-roles
+- name: BasicAuth
+  type: http
+  scheme: basic
+  description: >-
+    Used to obtain a bearer token (Classic API historically accepted basic
+    auth directly; bearer tokens are now the recommended path for both the
+    Jamf Pro API and the Classic API).
+authorization:
+  model: API Roles and Clients
+  concept: >-
+    An API Role is a collection of privileges defining which endpoints an API
+    Client can access. Multiple roles can be assigned to one client for
+    cumulative privileges. Managed via the api-roles, api-integrations, and
+    api-role-privileges endpoints, or the Jamf Pro UI.
+  privilege_lookup: /api/v1/api-role-privileges
+notes: >-
+  Jamf uses privileges via API Roles rather than OAuth scopes, so no OAuth
+  scope reference (scopes/) artifact is emitted; authentication carries the
+  authorization model.
