@@ -1,22 +1,156 @@
 aid: jamf
 name: JAMF
-description: JAMF is a company surfaced as a portfolio company of battery-ventures and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Jamf is the standard in managing and securing Apple devices at scale for
+  business, education, and government. Its cloud platform pairs Apple device
+  management (MDM), identity, and endpoint security with a broad developer
+  surface: the modern Jamf Pro API (OpenAPI 3.0, bearer-token and OAuth
+  client-credential API Roles & Clients), the long-standing Classic API
+  (/JSSResource, XML/JSON), the new unified Platform API Gateway (Blueprints,
+  Compliance Benchmarks, Device Management Actions), plus the Jamf School,
+  Jamf Protect, and Jamf Security APIs. Jamf publishes an llms.txt developer
+  index, a hosted MCP server for documentation and code generation, a webhooks
+  event catalog, and a trust center enumerating SOC 2, ISO 27001/27701, PCI
+  DSS, HIPAA, GDPR, and NIST 800-53 posture.
 url: https://raw.githubusercontent.com/api-evangelist/jamf/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - battery-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enrichment-pipeline
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://www.jamf.com/favicon.ico
 tags:
 - Company
-apis: []
+- Apple Device Management
+- MDM
+- Endpoint Security
+- Mobile Device Management
+- IT Operations
+- Identity
+- Compliance
+- Developer Tools
+- Enterprise
+apis:
+- name: Jamf Pro API
+  description: >-
+    The modern Jamf Pro API, built on the OpenAPI 3.0 standard, for
+    programmatically managing computers, mobile devices, policies, groups,
+    inventory, and configuration on a Jamf Pro instance. Authenticated with
+    bearer tokens or OAuth client-credential API Roles & Clients.
+  humanURL: https://developer.jamf.com/jamf-pro/reference/jamf-pro-api
+  baseURL: https://your-instance.jamfcloud.com/api
+  properties:
+  - type: Documentation
+    url: https://developer.jamf.com/jamf-pro/docs
+  - type: APIReference
+    url: https://developer.jamf.com/jamf-pro/reference/jamf-pro-api
+  - type: OpenAPI
+    url: https://your-instance.jamfcloud.com/api/schema
+- name: Jamf Pro Classic API
+  description: >-
+    The long-standing Classic API, the original resource for programmatically
+    interacting with Jamf Pro, located at /JSSResource on each instance.
+    Supports XML and JSON payloads and bearer-token authentication.
+  humanURL: https://developer.jamf.com/jamf-pro/reference/classic-api
+  baseURL: https://your-instance.jamfcloud.com/JSSResource
+  properties:
+  - type: APIReference
+    url: https://developer.jamf.com/jamf-pro/reference/classic-api
+- name: Jamf Platform API Gateway
+  description: >-
+    A single, unified gateway to access any combination of Jamf APIs —
+    Blueprints, Compliance Benchmarks, Device Management Actions, Declaration
+    Reporting, Devices, and Device Groups — described as the long-term future
+    of APIs at Jamf.
+  humanURL: https://developer.jamf.com/platform-api
+  baseURL: https://developer.jamf.com/platform-api/reference
+  properties:
+  - type: APIReference
+    url: https://developer.jamf.com/platform-api/reference
+common:
+- type: VulnerabilityDisclosure
+  url: security/jamf-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/jamf-domain-security.yml
+- type: Website
+  url: https://www.jamf.com/
+- type: DeveloperPortal
+  url: https://developer.jamf.com/
+- type: Documentation
+  url: https://developer.jamf.com/jamf-pro/docs
+- type: APIReference
+  url: https://developer.jamf.com/jamf-pro/reference/jamf-pro-api
+- type: GettingStarted
+  url: https://developer.jamf.com/developer-guide
+- type: Blog
+  url: https://www.jamf.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/jamf
+- type: Support
+  url: https://www.jamf.com/support/
+- type: Pricing
+  url: https://www.jamf.com/pricing/
+- type: SignUp
+  url: https://www.jamf.com/request-trial/
+- type: TermsOfService
+  url: https://www.jamf.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.jamf.com/trust-center/privacy/
+- type: StatusPage
+  url: https://status.jamf.com/
+- type: ChangeLog
+  url: https://developer.jamf.com/jamf-pro/changelog
+- type: LLMsTxt
+  url: llms/jamf-llms.txt
+- type: WellKnown
+  url: well-known/jamf-well-known.yml
+- type: APICatalog
+  url: well-known/jamf-api-catalog.json
+- type: SecurityTxt
+  url: well-known/jamf-security.txt
+- type: MCPServer
+  url: mcp/jamf-mcp.yml
+- type: Webhooks
+  url: asyncapi/jamf-webhooks.yml
+- type: Authentication
+  url: authentication/jamf-authentication.yml
+- type: Conventions
+  url: conventions/jamf-conventions.yml
+- type: Lifecycle
+  url: lifecycle/jamf-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/jamf-lifecycle.yml
+- type: Conformance
+  url: conformance/jamf-conformance.yml
+- type: Compliance
+  url: security/jamf-trust-center.yml
+- type: TrustCenter
+  url: security/jamf-trust-center.yml
+- type: Security
+  url: https://www.jamf.com/trust-center/vulnerability-disclosure/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

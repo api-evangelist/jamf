@@ -1,0 +1,63 @@
+generated: '2026-07-19'
+method: searched
+type: Webhooks
+source: https://developer.jamf.com/developer-guide/docs/webhooks
+summary: >-
+  Jamf Pro webhooks let you subscribe to instance events. When an event occurs
+  Jamf Pro sends an HTTP POST to a configured URL. Payloads are available in
+  JSON or XML and carry webhook metadata (event id, name, 13-digit epoch
+  timestamp, event type) plus event-specific data. Webhooks are configured
+  through the Classic API.
+transport: http-post
+payload_formats:
+- json
+- xml
+events:
+- name: ComputerAdded
+  description: A new computer enrolls into Jamf Pro.
+- name: ComputerCheckIn
+  description: A managed computer checks in (startup, login, logout, network change, enrollment complete, recurring check-in).
+- name: ComputerInventoryCompleted
+  description: A managed computer submits inventory.
+- name: ComputerPatchPolicyCompleted
+  description: A Computer Patch Policy completes.
+- name: ComputerPolicyFinished
+  description: A managed computer executes a policy (success or failure).
+- name: ComputerPushCapabilityChanged
+  description: A device's push notification capability status changes.
+- name: DeviceAddedToDEP
+  description: Jamf Pro receives information about a new Device Enrollment Program device.
+- name: JSSShutdown
+  description: The Jamf Pro service stops.
+- name: JSSStartup
+  description: The Jamf Pro service starts.
+- name: MobileDeviceCheckIn
+  description: Managed mobile devices receive initial MDM command communication.
+- name: MobileDeviceCommandCompleted
+  description: Jamf Pro receives acknowledgement of a completed mobile device command.
+- name: MobileDeviceEnrolled
+  description: A mobile device enrolls or re-enrolls.
+- name: MobileDeviceInventoryCompleted
+  description: A device completes the Update Inventory MDM command.
+- name: MobileDevicePushSent
+  description: Jamf Pro issues a push command to a mobile device.
+- name: MobileDeviceUnenrolled
+  description: An MDM Profile is removed from a device.
+- name: PatchSoftwareTitleUpdated
+  description: Jamf Pro receives patch management software title updates.
+- name: PushSent
+  description: Jamf Pro sends remote commands to computers or mobile devices.
+- name: RestAPIOperation
+  description: Authorized HTTP requests are made to supported Classic API resources.
+- name: SCEPChallenge
+  description: SCEP payload assembly occurs (requires Dynamic challenge type).
+- name: SmartGroupComputerMembershipChange
+  description: Computers join or leave smart computer groups.
+- name: SmartGroupMobileDeviceMembershipChange
+  description: Mobile devices join or leave smart mobile device groups.
+- name: SmartGroupUserMembershipChange
+  description: Users join or leave smart user groups.
+asyncapi_spec: null
+asyncapi_note: >-
+  Jamf documents a webhook event catalog but does not publish an AsyncAPI
+  document. Captured as a Webhooks surface; no AsyncAPI spec fabricated.

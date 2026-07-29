@@ -1,0 +1,72 @@
+# Jamf Developer Portal Documentation
+
+> Developer resources for Jamf products. Explore Jamf APIs, SDKs and documentation, allowing you to extend the Jamf platform.
+
+> Each project below links to its own llms.txt, which contains a full index of that project's documentation. The section and category links under it narrow to that part of the docs.
+
+## Jamf Pro
+
+- [Jamf Pro](https://developer.jamf.com/jamf-pro/llms.txt): The Classic API is the primary resource for programmatically interacting with Jamf Pro. The base URL for the Classic API is located at /JSSResource on each Jamf Pro instance. Documentation and "Try it out" features are built into each instance of Jamf Pro, and can be accessed at /api.
+
+### Guides
+
+- [Guides index](https://developer.jamf.com/jamf-pro/docs/llms.txt): full section index
+- [Jamf Pro API Docs](https://developer.jamf.com/jamf-pro/docs/jamf-pro-api-docs/llms.txt)
+- [Classic API Docs](https://developer.jamf.com/jamf-pro/docs/classic-api-docs/llms.txt)
+- [Developer Resources](https://developer.jamf.com/jamf-pro/docs/developer-resources/llms.txt)
+- [Title Editor](https://developer.jamf.com/jamf-pro/docs/title-editor/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://developer.jamf.com/jamf-pro/reference/llms.txt): full section index
+- [Classic API Introduction](https://developer.jamf.com/jamf-pro/reference/classic-api-introduction/llms.txt)
+- [Classic API](https://developer.jamf.com/jamf-pro/reference/classic-api/llms.txt)
+- [Jamf Pro API Introduction](https://developer.jamf.com/jamf-pro/reference/jamf-pro-api-introduction/llms.txt)
+- [Jamf Pro API](https://developer.jamf.com/jamf-pro/reference/jamf-pro-api/llms.txt)
+- [Title Editor](https://developer.jamf.com/jamf-pro/reference/title-editor/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://developer.jamf.com/jamf-pro/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://developer.jamf.com/jamf-pro/changelog/llms.txt): full section index
+
+
+## Platform API Gateway
+
+- [Platform API Gateway](https://developer.jamf.com/platform-api/llms.txt): A single, unified way to access any combination of Jamf APIs. Unify your workflows and realize the full value of your Jamf journey.
+
+### Guides
+
+- [Guides index](https://developer.jamf.com/platform-api/docs/llms.txt): full section index
+- [Building with AI](https://developer.jamf.com/platform-api/docs/building-with-ai/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://developer.jamf.com/platform-api/reference/llms.txt): full section index
+- [Platform API Gateway Introduction](https://developer.jamf.com/platform-api/reference/platform-api-gateway-introduction/llms.txt)
+- [Blueprints](https://developer.jamf.com/platform-api/reference/blueprints/llms.txt)
+- [Declaration Reporting](https://developer.jamf.com/platform-api/reference/declaration-reporting/llms.txt)
+- [Device Management Actions](https://developer.jamf.com/platform-api/reference/device-management-actions/llms.txt)
+- [Compliance Benchmarks](https://developer.jamf.com/platform-api/reference/compliance-benchmarks/llms.txt)
+- [Device Groups](https://developer.jamf.com/platform-api/reference/device-groups/llms.txt)
+- [Devices](https://developer.jamf.com/platform-api/reference/devices/llms.txt)
+- [Jamf Pro](https://developer.jamf.com/platform-api/reference/jamf-pro/llms.txt)
+- [Jamf PRo Classic](https://developer.jamf.com/platform-api/reference/jamf-pro-classic/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://developer.jamf.com/platform-api/recipes/llms.txt): full section index
+
+
+## Other Guides
+
+- [Other Guides](https://developer.jamf.com/developer-guide/llms.txt): Explore Jamf Developer resources and documentation. Learn about Webhooks, Managed App Configuration, Apps & Custom Settings and much more!
+
+### Guides
+
+- [Guides index](https://developer.jamf.com/developer-guide/docs/llms.txt): full section index
+- [Other Resources](https://developer.jamf.com/developer-guide/docs/other-resources/llms.txt)
+- [MCP Server](https://developer.jamf.com/developer-guide/docs/mcp-server/llms.txt)

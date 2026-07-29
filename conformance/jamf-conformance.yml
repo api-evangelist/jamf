@@ -1,0 +1,47 @@
+generated: '2026-07-19'
+method: searched
+source:
+- https://developer.jamf.com/jamf-pro/reference/jamf-pro-api-introduction
+- https://developer.jamf.com/jamf-pro/docs/client-credentials
+- https://www.jamf.com/.well-known/security.txt
+- https://developer.jamf.com/.well-known/api-catalog
+- https://security.jamf.com/
+standards:
+- id: openapi-3.0
+  conforms: true
+  evidence: Jamf Pro API Reference is built on the OpenAPI 3.0 (OAS 3) standard; schema at /api/schema.
+- id: oauth2-client-credentials
+  conforms: true
+  evidence: OAuth client-credential API Clients since Jamf Pro 10.49.0.
+- id: bearer-token
+  conforms: true
+  evidence: POST /api/v1/auth/token issues bearer tokens sent as Authorization Bearer.
+- id: rfc9116-security-txt
+  conforms: true
+  evidence: https://www.jamf.com/.well-known/security.txt (Contact/Policy/Canonical present).
+- id: rfc9727-api-catalog
+  conforms: true
+  evidence: https://developer.jamf.com/.well-known/api-catalog returns application/linkset+json.
+- id: webhooks
+  conforms: true
+  evidence: 22 documented webhook event types with JSON/XML payloads.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Jamf Pro API errors use a custom errors[] envelope, not application/problem+json.
+- id: scim
+  conforms: false
+  evidence: No SCIM 2.0 provisioning endpoint documented on the developer portal.
+compliance_programs:
+- SOC 2 Type 1
+- SOC 2 Type 2
+- ISO/IEC 27001
+- ISO/IEC 27701
+- PCI DSS
+- HIPAA
+- GDPR
+- CSA STAR
+- NIST 800-53 Rev. 5
+- Cyber Essentials
+- EU-US Data Privacy Framework
+- CCPA / CPRA
+compliance_source: https://security.jamf.com/

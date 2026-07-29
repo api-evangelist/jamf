@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: searched
+source:
+- https://developer.jamf.com/jamf-pro/reference/jamf-pro-api-introduction
+- https://developer.jamf.com/jamf-pro/reference/classic-api-introduction
+- https://developer.jamf.com/jamf-pro/docs/jamf-pro-api-overview
+summary: >-
+  Cross-cutting request/response semantics for the Jamf Pro platform. The
+  modern Jamf Pro API is OpenAPI 3.0, JSON, versioned in the URI path; the
+  Classic API is XML/JSON at /JSSResource. Authentication is bearer-token or
+  OAuth client-credentials (see authentication/).
+authentication:
+  style: bearer-token / oauth2 client-credentials
+  ref: authentication/jamf-authentication.yml
+base_urls:
+  jamf_pro_api: /api            # on each instance, e.g. https://your-instance.jamfcloud.com/api
+  classic_api: /JSSResource     # on each instance
+data_formats:
+  jamf_pro_api: [application/json]
+  classic_api: [application/xml, application/json]
+  content_negotiation: >-
+    Classic API uses the Accept and Content-Type headers to select XML or JSON.
+versioning:
+  scheme: uri-path
+  jamf_pro_api: version prefixes such as /v1, /v2; `preview` endpoints are pre-v1 and may break.
+  classic_api: unversioned resource paths under /JSSResource
+  ref: lifecycle/jamf-lifecycle.yml
+idempotency:
+  supported: false
+  note: >-
+    Jamf does not document an idempotency-key header or contract; no
+    Idempotency pointer is emitted.
+pagination:
+  jamf_pro_api:
+    style: page-based
+    params: [page, page-size]
+    sort_filter: RSQL-based `filter` and `sort` query parameters on supported endpoints
+    response_fields: [totalCount, results]
+error_envelope:
+  jamf_pro_api: >-
+    JSON error responses carry an `httpStatus` and an `errors[]` array with
+    `code`, `field`, `description`, and `id` entries.
+  ref: errors/
+webhooks:
+  ref: asyncapi/jamf-webhooks.yml
+  formats: [json, xml]
+rate_limits:
+  documented: false
+  note: Jamf does not publish a numeric global rate-limit contract for the Jamf Pro API.

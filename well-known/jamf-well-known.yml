@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of /.well-known/ on Jamf hosts
+hosts:
+- host: https://www.jamf.com
+  documents:
+  - path: /.well-known/security.txt          # RFC 9116
+    status: 200
+    file: jamf-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+- host: https://developer.jamf.com
+  documents:
+  - path: /.well-known/api-catalog            # RFC 9727 linkset
+    status: 200
+    file: jamf-api-catalog.json
+  - path: /.well-known/security.txt
+    status: 200                               # SPA fallback (text/html), not a real RFC 9116 file
+    note: returns the docs SPA HTML, not a security.txt; canonical security.txt is on www.jamf.com
+  - path: /.well-known/ai-plugin.json
+    status: 200                               # SPA fallback (text/html), not a real plugin manifest
+  - path: /.well-known/openid-configuration
+    status: 404

@@ -1,0 +1,16 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.jamf.com/jamf-pro/changelog
+scheme: >-
+  Jamf Pro API changes are published in a dated developer changelog and tied
+  to Jamf Pro product releases (e.g. 10.49.0, 11.x). The changelog index is
+  also exposed for machine consumption at
+  https://developer.jamf.com/jamf-pro/changelog/llms.txt.
+current_version_note: >-
+  Version tracked against Jamf Pro releases; the live changelog is the source
+  of truth for the current version.
+entries: []
+entries_note: >-
+  A structured recent-entries capture was not completed — the changelog page
+  returned HTTP 503 at probe time. The canonical dated changelog lives at the
+  source URL above; entries[] intentionally left empty rather than fabricated.

@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source:
+- https://developer.jamf.com/jamf-pro/reference/jamf-pro-api-introduction
+- https://developer.jamf.com/jamf-pro/changelog
+- https://status.jamf.com/
+versioning:
+  scheme: uri-path
+  jamf_pro_api: v1 / v2 endpoints; `preview` endpoints precede v1
+  classic_api: unversioned /JSSResource resources
+  docs: https://developer.jamf.com/jamf-pro/reference/jamf-pro-api-introduction
+deprecation:
+  policy: >-
+    Endpoints containing the term `preview` are not recommended for production
+    and are likely to experience breaking changes prior to their v1 release.
+    Stable v1/v2 endpoints follow Jamf Pro's release cadence with changes
+    tracked in the changelog. Classic API resources are progressively
+    superseded by Jamf Pro API equivalents.
+  preview_endpoints: true
+  policy_url: https://developer.jamf.com/jamf-pro/reference/jamf-pro-api-introduction
+status_page: https://status.jamf.com/
+changelog: https://developer.jamf.com/jamf-pro/changelog
+sla:
+  url: null
+  note: Jamf publishes a public status page (status.jamf.com) but no public numeric uptime SLA.
+deprecated_operations: []
+deprecated_operations_note: >-
+  No OpenAPI spec is captured in the repo (the Jamf Pro OpenAPI schema is
+  served per-instance at /api/schema and requires an authenticated instance),
+  so deprecated operations cannot be derived here.

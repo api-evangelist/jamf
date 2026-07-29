@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+probe: true
+source: https://security.jamf.com/
+url: https://security.jamf.com/
+certifications:
+- SOC 2 Type 1
+- SOC 2 Type 2
+- ISO/IEC 27001
+- ISO/IEC 27001 SoA
+- ISO/IEC 27701
+- PCI DSS
+- HIPAA
+- GDPR
+- CSA STAR
+- NIST 800-53 Rev. 5
+- Cyber Essentials
+- EU-US Data Privacy Framework
+- CCPA
+- CPRA
+evidence:
+- source: https://security.jamf.com/
+  keywords:
+  - soc 2
+  - iso/iec 27001
+  - pci dss
+  - hipaa
+  - gdpr
+  - csa star

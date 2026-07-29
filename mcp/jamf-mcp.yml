@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://developer.jamf.com/developer-guide/docs/mcp-server
+server:
+  name: jamf-developer
+  transport: http
+  url: https://developer.jamf.com/mcp
+  hosting: remote
+  install: >-
+    No installation required. Add the remote server URL
+    https://developer.jamf.com/mcp to your MCP client (Cursor
+    ~/.cursor/mcp.json, Windsurf ~/.codeium/windsurf/mcp_config.json,
+    or Claude Desktop claude_desktop_config.json).
+authentication: >-
+  The developer-docs MCP server itself is open. For calls that reach APIs
+  requiring authentication, headers can be passed via query parameters or the
+  MCP client's header configuration.
+tools:
+- name: search_documentation
+  description: Search the Jamf developer documentation corpus.
+- name: generate_code
+  description: Generate code for Jamf API integrations from the documentation.
+notes: >-
+  Official Jamf-hosted remote MCP server scoped to the Jamf developer
+  documentation and code generation. Complements the llms.txt developer index
+  and the per-instance OpenAPI schema at /api/schema.
