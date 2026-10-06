@@ -44,7 +44,7 @@ accessModel:
   method: derived
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-10-06'
 image: https://www.jamf.com/favicon.ico
 x-docs-platform: readme
 x-docs-platform-confidence: high
@@ -98,6 +98,8 @@ apis:
   - type: APIReference
     url: https://developer.jamf.com/platform-api/reference
 common:
+- url: https://www.jamf.com/blog/rss/
+  type: BlogRSS
 - type: VulnerabilityDisclosure
   url: security/jamf-vulnerability-disclosure.yml
 - type: DomainSecurity
