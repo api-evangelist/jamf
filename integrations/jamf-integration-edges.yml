@@ -12,6 +12,7 @@ checked:
 - https://zapier.com/api/v4/apps/
 - microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
 - splunk/integrations/splunk-integration-edges.yml
+- zoom/integrations/zoom-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -259,6 +260,23 @@ edges:
     builder: Fivetran
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/z9S2HsipQ1qX-Li8Bboudg
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - Jamf Teacher
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
 source:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
 - datadog/integrations/datadog-integration-edges.yml
