@@ -15,56 +15,6 @@ checked:
 - zoom/integrations/zoom-integration-edges.yml
 marketplace_apps: []
 edges:
-- partner_name: AWS Marketplace
-  partner: amazon-web-services
-  partner_match: aggregator
-  type: marketplace
-  marketplace: aws-marketplace
-  channel: distribution
-  relationship: distribution-channel
-  direction: third-party
-  evidence: https://aws.amazon.com/marketplace/seller-profile?id=33afbdc6-58a7-4ec3-86cf-6cbab05f0a5c
-  listing_count: 7
-  apps:
-  - Jamf Pro
-  - Jamf for Mac
-  - Jamf Business Plan
-  - Jamf for Mobile
-  - Jamf for K12
-  seller_name: Jamf
-  detected_by: sweep-cloud-marketplaces.py
-  detected: '2026-10-13'
-- partner_name: Microsoft Azure Marketplace
-  partner: microsoft-azure
-  partner_match: aggregator
-  type: marketplace
-  marketplace: azure-marketplace
-  channel: distribution
-  relationship: distribution-channel
-  direction: third-party
-  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Jamf%20Software%2C%20LLC
-  listing_count: 2
-  apps:
-  - Jamf for Mac
-  - Jamf Professional Services
-  seller_name: Jamf Software, LLC
-  detected_by: sweep-cloud-marketplaces.py
-  detected: '2026-10-13'
-- partner_name: Microsoft Azure Marketplace
-  partner: microsoft-azure
-  partner_match: aggregator
-  type: marketplace
-  marketplace: azure-marketplace
-  channel: distribution
-  relationship: distribution-channel
-  direction: third-party
-  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Jamf%20Software%2C%20LLC
-  listing_count: 1
-  apps:
-  - Jamf Protect for Microsoft Sentinel
-  seller_name: Jamf Software, LLC
-  detected_by: sweep-cloud-marketplaces.py
-  detected: '2026-10-13'
 - partner_name: CrowdStrike (own)
   partner: crowdstrike
   partner_match: mirror
@@ -204,6 +154,23 @@ edges:
     builder: unknown (not in the directory record)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/z9S2HsipQ1qX-Li8Bboudg
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - Jamf Teacher
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
 - partner_name: Airbyte
   partner: airbyte
   partner_match: aggregator
@@ -260,23 +227,56 @@ edges:
     builder: Fivetran
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
-- partner_name: Zoom (own)
-  partner: zoom
-  partner_match: mirror
-  mirror_match: domain
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
   type: marketplace
-  relationship: platform-app
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: distribution-channel
   direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://marketplace.zoom.us/apps/z9S2HsipQ1qX-Li8Bboudg
-  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=33afbdc6-58a7-4ec3-86cf-6cbab05f0a5c
+  listing_count: 7
   apps:
-  - Jamf Teacher
+  - Jamf Pro
+  - Jamf for Mac
+  - Jamf Business Plan
+  - Jamf for K12
+  - Jamf for Mobile
+  seller_name: Jamf
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
+- partner_name: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_match: aggregator
+  type: marketplace
+  marketplace: azure-marketplace
+  channel: distribution
+  relationship: distribution-channel
+  direction: third-party
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Jamf%20Software%2C%20LLC
+  listing_count: 2
+  apps:
+  - Jamf for Mac
+  - Jamf Professional Services
+  seller_name: Jamf Software, LLC
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
+- partner_name: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_match: aggregator
+  type: marketplace
+  marketplace: azure-marketplace
+  channel: distribution
+  relationship: distribution-channel
+  direction: third-party
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Jamf%20Software%2C%20LLC
   listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Zoom app
+  apps:
+  - Jamf Protect for Microsoft Sentinel
+  seller_name: Jamf Software, LLC
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
 source:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
 - datadog/integrations/datadog-integration-edges.yml
