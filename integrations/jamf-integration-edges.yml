@@ -15,7 +15,18 @@ checked:
 - microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
 - splunk/integrations/splunk-integration-edges.yml
 - zoom/integrations/zoom-integration-edges.yml
-marketplace_apps: []
+- https://marketplace.jamf.com/
+- https://marketplace.jamf.com/client-api/v2/apps
+- microsoft-intune/integrations/microsoft-intune-integration-edges.yml
+marketplace_apps:
+- marketplace: own
+  channel: partner-built
+  app: jamf
+  url: https://marketplace.jamf.com/
+  app_count: 365
+  adapter: sweep-device-management.py:jamf
+  listed: 92
+  note: only domain-linked vendors / builders are written
 edges:
 - partner_name: CrowdStrike (own)
   partner: crowdstrike
@@ -309,6 +320,2428 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-compliance-assurance.py
   first_seen: '2026-10-20'
+- partner_name: 1Password
+  app: Trelica by 1Password
+  partner: 1password
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/trelica-by-1password
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: 1Password
+    matched_domain: 1password.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Trelica by 1Password
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Acronis
+  app: Acronis Access
+  partner: acronis
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/acronis-access
+  category: Configuration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Acronis
+    matched_domain: acronis.com
+    matched_by: domain
+    listings: 2
+    sample_apps:
+    - Acronis Access
+    - Acronis Cyber Protect Cloud
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: AWS
+  app: AWS Private CA
+  partner: amazon-web-services
+  partner_match: domain+verified
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/aws-private-certificate-authority
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: AWS
+    matched_domain: amazon.com
+    matched_by: domain+verified
+    listings: 1
+    sample_apps:
+    - AWS Private CA
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: anecdotes
+  app: anecdotes Compliance OS
+  partner: anecdotes
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/anecdotes-compliance-os
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: anecdotes
+    matched_domain: anecdotes.ai
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - anecdotes Compliance OS
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Anzenna
+  app: Anzenna
+  partner: anzenna
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/anzenna
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Anzenna
+    matched_domain: anzenna.ai
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Anzenna
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Aruba - a Hewlett Packard Enterprise company
+  app: Aruba ClearPass
+  partner: aruba
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/aruba-clearpass
+  category: Integration, Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Aruba - a Hewlett Packard Enterprise company
+    matched_domain: arubanetworks.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Aruba ClearPass
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Axonius
+  app: Axonius Cybersecurity Asset Management Platform
+  partner: axonius
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/axonius-cybersecurity-asset-management-platform
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Axonius
+    matched_domain: axonius.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Axonius Cybersecurity Asset Management Platform
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Backblaze
+  app: Backblaze Computer Backup
+  partner: backblaze
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/backblaze
+  category: Configuration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Backblaze
+    matched_domain: backblaze.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Backblaze Computer Backup
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: BetterCloud
+  app: BetterCloud
+  partner: bettercloud
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/bettercloud
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: BetterCloud
+    matched_domain: bettercloud.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - BetterCloud
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Beyond Identity
+  app: Beyond Identity
+  partner: beyond-identity
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/beyond-identity
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Beyond Identity
+    matched_domain: beyondidentity.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Beyond Identity
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: BeyondTrust Corp
+  app: Rapid Deployment Tool
+  partner: beyondtrust
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/rapid-deployment-tool
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: BeyondTrust Corp
+    matched_domain: beyondtrust.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Rapid Deployment Tool
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Bigtincan
+  app: Bigtincan Hub
+  partner: bigtincan
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/bigtincan-hub
+  category: Configuration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Bigtincan
+    matched_domain: bigtincan.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Bigtincan Hub
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Broadcom
+  app: SEP Mobile
+  partner: broadcom
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/sep-mobile
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Broadcom
+    matched_domain: broadcom.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - SEP Mobile
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: C1
+  app: C1
+  partner: c1
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/conductorone
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: C1
+    matched_domain: c1.ai
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - C1
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Check Point Software Technologies LTD
+  app: Check Point SandBlast Mobile
+  partner: checkpoint
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/check-point-sandblast-mobile
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Check Point Software Technologies LTD
+    matched_domain: checkpoint.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Check Point SandBlast Mobile
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Cisco
+  app: Cisco Identity Services Engine
+  partner: cisco
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/cisco-identity-services-engine
+  category: Configuration, Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Cisco
+    matched_domain: cisco.com
+    matched_by: domain+name-among-holders
+    listings: 2
+    sample_apps:
+    - Cisco Identity Services Engine
+    - Cisco SecureX
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Cisco
+  app: Webex
+  partner: cisco-webex-meetings
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/webex
+  category: Configuration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Cisco
+    matched_domain: webex.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Webex
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: CloudQuery
+  app: CloudQuery Jamf Source Plugin
+  partner: cloudquery
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/cloudquery-jamf-source-plugin
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: CloudQuery
+    matched_domain: cloudquery.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - CloudQuery Jamf Source Plugin
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Code42
+  app: Code42
+  partner: code-42
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/code42
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Code42
+    matched_domain: code42.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Code42
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: ControlUp, Inc.
+  app: ControlUp DEX Management For macOS
+  partner: controlup
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/controlup-dex-management-for-macos
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: ControlUp, Inc.
+    matched_domain: controlup.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - ControlUp DEX Management For macOS
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Crave Retail
+  app: Digital Fitting Room
+  partner: crave-retail
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/interactive-fitting-room
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Crave Retail
+    matched_domain: craveretail.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Digital Fitting Room
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Crowdstrike
+  app: CrowdStrike Falcon
+  partner: crowdstrike
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/crowdstrike-falcon
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Crowdstrike
+    matched_domain: crowdstrike.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - CrowdStrike Falcon
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Cyberhaven
+  app: Cyberhaven
+  partner: cyberhaven
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/cyberhaven
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Cyberhaven
+    matched_domain: cyberhaven.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Cyberhaven
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Delinea
+  app: Delinea Privilege Manager
+  partner: delinea
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/delinea-privilege-manager
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Delinea
+    matched_domain: delinea.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Delinea Privilege Manager
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Desmos
+  app: Desmos Graphing Calculator
+  partner: desmos
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/desmos-graphing-calculator
+  category: Configuration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Desmos
+    matched_domain: desmos.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Desmos Graphing Calculator
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Digicert
+  app: DigiCert ONE Trust Lifecycle Manager
+  partner: digicert
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/digicert-one-trust-lifecycle-manager-with-jamf-pro
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Digicert
+    matched_domain: digicert.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - DigiCert ONE Trust Lifecycle Manager
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Domo
+  app: Domo for Jamf Pro
+  partner: domo
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/domo
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Domo
+    matched_domain: domo.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Domo for Jamf Pro
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Drata
+  app: Drata
+  partner: drata
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/drata
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Drata
+    matched_domain: drata.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Drata
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Elastic Security
+  app: Elastic Security
+  partner: elastic
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/elastic-security
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Elastic Security
+    matched_domain: elastic.co
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Elastic Security
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: eSpark
+  app: eSpark Learning
+  partner: espark
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/espark-learning
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: eSpark
+    matched_domain: esparklearning.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - eSpark Learning
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Extreme Networks
+  app: Extreme Networks
+  partner: extreme-networks
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/aerohive
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Extreme Networks
+    matched_domain: extremenetworks.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Extreme Networks
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Forescout
+  app: Forescout - eyeExtend for Jamf®
+  partner: forescout
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/eyeextend-for-jamf
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Forescout
+    matched_domain: forescout.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Forescout - eyeExtend for Jamf®
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Fortinet
+  app: FortiNAC
+  partner: fortinet
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/fortinac
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Fortinet
+    matched_domain: fortinet.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - FortiNAC
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Google
+  app: BeyondCorp Context-Aware Access
+  partner: google
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/beyondcorp-conditional-access
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Google
+    matched_domain: google.com
+    matched_by: domain+name-among-holders
+    listings: 5
+    sample_apps:
+    - BeyondCorp Context-Aware Access
+    - Google Chrome Enterprise for macOS
+    - Google Chrome for iOS and iPad
+    - Google Cloud Identity
+    - Google SecOps
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Hill-Rom Holdings
+  app: Voalte Mobile
+  partner: hill-rom-holdings
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/Voalte-mobile
+  category: Configuration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Hill-Rom Holdings
+    matched_domain: hillrom.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Voalte Mobile
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Imprivata
+  app: Imprivata GroundControl
+  partner: imprivata
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/imprivata-groundcontrol
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Imprivata
+    matched_domain: imprivata.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Imprivata GroundControl
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Incident IQ
+  app: Incident IQ
+  partner: incident-iq
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/incident-iq
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Incident IQ
+    matched_domain: incidentiq.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Incident IQ
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Ivanti
+  app: Ivanti Neurons for Discovery
+  partner: ivanti
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/ivanti-neurons-for-discovery
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Ivanti
+    matched_domain: ivanti.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Ivanti Neurons for Discovery
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: JOSYS INC.
+  app: Josys
+  partner: josys
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/josys
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: JOSYS INC.
+    matched_domain: josys.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Josys
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: JupiterOne, Inc.
+  app: JupiterOne, Inc.
+  partner: jupiterone
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/jupiterone-inc
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: JupiterOne, Inc.
+    matched_domain: jupiterone.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - JupiterOne, Inc.
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Kaseya
+  app: IT Glue
+  partner: kaseya
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/it-glue-1
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Kaseya
+    matched_domain: kaseya.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - IT Glue
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Keeper Security Inc.
+  app: Keeper Password Manager
+  partner: keeper-security
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/keeper-password-manager
+  category: Configuration, Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Keeper Security Inc.
+    matched_domain: keepersecurity.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Keeper Password Manager
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Monkinum Inc
+  app: Lingokids
+  partner: lingokids
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/lingokids
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Monkinum Inc
+    matched_domain: lingokids.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Lingokids
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Lookout, Inc.
+  app: Lookout Mobile Threat Defense
+  partner: lookout
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/lookout-mobile-threat-defense
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Lookout, Inc.
+    matched_domain: lookout.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Lookout Mobile Threat Defense
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Microsoft
+  app: Microsoft Entra ID
+  partner: microsoft
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/Microsoft-Entra-ID
+  category: Integration, Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Microsoft
+    matched_domain: microsoft.com
+    matched_by: domain+name-among-holders
+    listings: 3
+    sample_apps:
+    - Microsoft Defender
+    - Microsoft Entra ID
+    - Power BI
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Moveworks
+  app: Moveworks Agent Studio
+  partner: moveworks
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/moveworks-agent-studio
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Moveworks
+    matched_domain: moveworks.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Moveworks Agent Studio
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Netwrix
+  app: Netwrix Endpoint Protector
+  partner: netwrix
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/endpoint-protector-by-cososys
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Netwrix
+    matched_domain: netwrix.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Netwrix Endpoint Protector
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Nexthink
+  app: Nexthink Infinity
+  partner: nexthink
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/nexthink-infinity
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Nexthink
+    matched_domain: nexthink.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Nexthink Infinity
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Okta
+  app: Okta
+  partner: okta
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/okta
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Okta
+    matched_domain: okta.com
+    matched_by: domain
+    listings: 2
+    sample_apps:
+    - Okta
+    - Okta Workflows
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: OneLogin
+  app: OneLogin Cloud Identity and Access Management
+  partner: onelogin
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/onelogin-cloud-identity-and-access-management
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: OneLogin
+    matched_domain: onelogin.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - OneLogin Cloud Identity and Access Management
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Oomnitza
+  app: Oomnitza Asset Lifecycle Management
+  partner: oomnitza
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/oomnitza
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Oomnitza
+    matched_domain: oomnitza.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Oomnitza Asset Lifecycle Management
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Palo Alto Networks
+  app: Palo Alto Networks Cortex XSOAR
+  partner: palo-alto-networks
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/palo-alto-networks-cortex-xsoar
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Palo Alto Networks
+    matched_domain: paloaltonetworks.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Palo Alto Networks Cortex XSOAR
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Panther
+  app: Panther
+  partner: panther
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/panther
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Panther
+    matched_domain: panther.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Panther
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Parallels
+  app: Parallels Desktop Business Edition
+  partner: parallels
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/parallels-desktop-business-edition
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Parallels
+    matched_domain: parallels.com
+    matched_by: domain+name-among-holders
+    listings: 2
+    sample_apps:
+    - Parallels Desktop Business Edition
+    - Parallels Desktop Enterprise Edition
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Ping Identity
+  app: Ping Identity
+  partner: ping-identity
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/ping-identity
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Ping Identity
+    matched_domain: pingidentity.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Ping Identity
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Red Canary
+  app: Red Canary MDR
+  partner: red-canary
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/red-canary
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Red Canary
+    matched_domain: redcanary.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Red Canary MDR
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Zipline
+  app: Zipline
+  partner: retail-zipline
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/zipline-1
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Zipline
+    matched_domain: getzipline.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Zipline
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: SailPoint SaaS Management
+  app: SailPoint SaaS Management
+  partner: sailpoint
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/sailpoint-saas-management
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: SailPoint SaaS Management
+    matched_domain: sailpoint.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - SailPoint SaaS Management
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Salesforce
+  app: Salesforce SDK
+  partner: salesforce
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/salesforce-sdk
+  category: Configuration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Salesforce
+    matched_domain: salesforce.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Salesforce SDK
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Scandit
+  app: Scandit Keyboard Wedge
+  partner: scandit
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/scandit-keyboard-wedge
+  category: Configuration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Scandit
+    matched_domain: scandit.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Scandit Keyboard Wedge
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Secureframe
+  app: Secureframe
+  partner: secureframe
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/secureframe
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Secureframe
+    matched_domain: secureframe.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Secureframe
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: SecureW2
+  app: SecureW2 JoinNow
+  partner: securew2
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/securew2-joinnow
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: SecureW2
+    matched_domain: securew2.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - SecureW2 JoinNow
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: ServiceNow
+  app: ServiceNow CMDB Integration
+  partner: servicenow
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/servicenow-cmdb-integration
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: ServiceNow
+    matched_domain: servicenow.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - ServiceNow CMDB Integration
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: SGNL
+  app: SGNL
+  partner: sgnl
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/sgnl
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: SGNL
+    matched_domain: sgnl.ai
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - SGNL
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Showbie Inc.
+  app: Showbie
+  partner: showbie
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/showbie
+  category: Configuration, Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Showbie Inc.
+    matched_domain: showbie.com
+    matched_by: domain
+    listings: 2
+    sample_apps:
+    - Showbie
+    - Socrative
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Showpad
+  app: Showpad
+  partner: showpad
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/showpad
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Showpad
+    matched_domain: showpad.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Showpad
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Smallstep Labs, Inc.
+  app: Smallstep Managed Device Identity
+  partner: smallstep
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/smallstep-managed-device-identity
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Smallstep Labs, Inc.
+    matched_domain: smallstep.com
+    matched_by: domain
+    listings: 2
+    sample_apps:
+    - Smallstep Managed Device Identity
+    - Smallstep Wi-Fi Professional
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: SolarWinds
+  app: SolarWinds Service Desk
+  partner: solarwinds
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/solarwinds-service-desk
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: SolarWinds
+    matched_domain: solarwinds.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - SolarWinds Service Desk
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Speakeasy Development, Inc
+  app: Speakeasy
+  partner: speakeasy
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/speakeasy
+  category: Configuration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Speakeasy Development, Inc
+    matched_domain: speakeasy.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Speakeasy
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Splashtop Inc.
+  app: Splashtop for Business
+  partner: splashtop
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/splashtop-for-business
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Splashtop Inc.
+    matched_domain: splashtop.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Splashtop for Business
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: SurePath AI
+  app: SurePath AI
+  partner: surepath-ai
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/surepath-ai
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: SurePath AI
+    matched_domain: surepath.ai
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - SurePath AI
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Swimlane (SOAR)
+  app: Swimlane
+  partner: swimlane
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/swimlane
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Swimlane (SOAR)
+    matched_domain: swimlane.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Swimlane
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Tailscale Inc
+  app: Tailscale Device Trust
+  partner: tailscale
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/tailscale
+  category: Integration, Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Tailscale Inc
+    matched_domain: tailscale.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Tailscale Device Trust
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: TeamViewer
+  app: TeamViewer
+  partner: teamviewer
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/teamviewer
+  category: Configuration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: TeamViewer
+    matched_domain: teamviewer.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - TeamViewer
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: ThingLink Oy
+  app: ThingLink
+  partner: thinglink
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/thinglink
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: ThingLink Oy
+    matched_domain: thinglink.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - ThingLink
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Thoropass
+  app: Thoropass
+  partner: thoropass
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/Thoropass
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Thoropass
+    matched_domain: thoropass.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Thoropass
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Tines
+  app: Tines
+  partner: tines
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/tines
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Tines
+    matched_domain: tines.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Tines
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Torq
+  app: Torq
+  partner: torq
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/torq
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Torq
+    matched_domain: torq.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Torq
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Tracebit
+  app: Tracebit
+  partner: tracebit
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/tracebit
+  category: Deployment Guide
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Tracebit
+    matched_domain: tracebit.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Tracebit
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Trellix
+  app: Trellix Mobile Security
+  partner: trellix
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/trellix-mobile-security
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Trellix
+    matched_domain: trellix.com
+    matched_by: domain+name-among-holders
+    listings: 2
+    sample_apps:
+    - Trellix Endpoint Security (ENS)
+    - Trellix Mobile Security
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Twingate
+  app: Twingate ZTNA
+  partner: twingate
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/twingate-ztna
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Twingate
+    matched_domain: twingate.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Twingate ZTNA
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Vanta Inc
+  app: Vanta
+  partner: vanta
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/vanta
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Vanta Inc
+    matched_domain: vanta.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Vanta
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Veeam
+  app: Veeam Agent for Mac
+  partner: veeam
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/veeam-agent-for-mac
+  category: Configuration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Veeam
+    matched_domain: veeam.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Veeam Agent for Mac
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Venafi
+  app: Venafi
+  partner: venafi
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/venafi
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Venafi
+    matched_domain: venafi.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Venafi
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Workato
+  app: Workato
+  partner: workato
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/workato
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Workato
+    matched_domain: workato.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Workato
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Zero Networks
+  app: Zero Networks
+  partner: zero-networks
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/zero-networks
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Zero Networks
+    matched_domain: zeronetworks.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Zero Networks
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Zimperium
+  app: Zimperium Mobile Threat Defense
+  partner: zimperium
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/zimperium-mobile-threat-defense
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Zimperium
+    matched_domain: zimperium.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Zimperium Mobile Threat Defense
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Zip Security
+  app: Zip Security
+  partner: zip-security
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/zip-security
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Zip Security
+    matched_domain: zipsec.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Zip Security
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Zluri
+  app: Zluri
+  partner: zluri
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/zluri-1
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Zluri
+    matched_domain: zluri.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Zluri
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Zscaler
+  app: Zscaler Security Posture Check
+  partner: zscaler
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.jamf.com/details/zscaler
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-app
+    registered_name: Zscaler
+    matched_domain: zscaler.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Zscaler Security Posture Check
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Jamf Protect for Microsoft Sentinel
+  app: Jamf Protect for Microsoft Sentinel
+  partner: microsoft-sentinel
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.jamf.com/details/jamf-protect-for-microsoft-sentinel
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-provider-built-app
+    registered_name: Jamf Software, LLC
+    matched_domain: microsoft.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Jamf Protect for Microsoft Sentinel
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Jamf Pro Add-on for Splunk
+  app: Jamf Pro Add-on for Splunk
+  partner: splunk
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.jamf.com/details/jamf-splunk-integration
+  category: Integration
+  contract_reference:
+    register: Jamf Marketplace (marketplace.jamf.com client-api/v2/apps, approved listings)
+    spec_file: null
+    role: jamf-provider-built-app
+    registered_name: Jamf Integrations
+    matched_domain: splunk.com
+    matched_by: domain+name-among-holders
+    listings: 2
+    sample_apps:
+    - Jamf Pro Add-on for Splunk
+    - Jamf Protect Add-on for Splunk
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+- partner_name: Microsoft Intune (partner connector docs)
+  partner: microsoft-intune
+  partner_match: mirror
+  mirror_match: domain
+  type: docs
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  evidence: https://learn.microsoft.com/en-us/intune/device-security/compliance/third-party-partners#supported-device-compliance-partners
+  mirror_of: microsoft-intune/integrations/microsoft-intune-integration-edges.yml
+  apps:
+  - Jamf Pro
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: Intune third-party device compliance partner
 source:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
 - datadog/integrations/datadog-integration-edges.yml
