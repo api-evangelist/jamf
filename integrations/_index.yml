@@ -2669,3 +2669,28 @@
     status: Acquired by Vista Equity
   status: not-a-workflow
   arazzo: null
+- slug: jamf-openid-foundation
+  label: OpenID Foundation
+  partner_name: OpenID Foundation
+  category: identity standards body membership
+  type: register
+  channel: standard-directory
+  evidence: https://openid.net/foundation/sponsoring-members/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: OpenID Foundation members (openid.net/foundation/sponsoring-members/)
+    standard: OpenID Foundation specifications (OpenID Connect, FAPI, CIBA, OpenID4VC, Shared Signals, AuthZEN)
+    spec_file: null
+    role: oidf-member
+    registered_name: Jamf
+    register_id: https://www.jamf.com/lp/jamf-brand-shared-25/?utm_source=google&utm_medium=cpc&utm_content=14881851722_128166246437_jamf_e_c_g_746082710596&gad_source=1&gad_campaignid=14881851722&gbraid=0AAAAADI7HfJVvZucHNoZ4Bqjhl0AIzmaV&gclid=CjwKCAjw3f_BBhAPEiwAaA3K5EkLxegDJKC0oEn9bOVBIS0KPc8Q9FGRQIkgA6PuzRm_HHTG1dhlERoCrNkQAvD_BwE
+    matched_domain: jamf.com
+    matched_by: domain
+    signal_note: 'participation only: corporate membership of the OpenID Foundation (level in partner_tier); the
+      logo links the member''s website (the link is the identity). Membership is not certification: OIDF certification
+      edges are written by sweep-identity.py and reused, not re-read'
+    detected_by: sweep-openid-certified-implementations.py
+    detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
