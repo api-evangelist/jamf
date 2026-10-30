@@ -64,6 +64,115 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-JAMF is a company surfaced as a portfolio company of battery-ventures and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Jamf is the standard in managing and securing Apple devices at scale for business, education, and government. Its cloud platform pairs Apple device management (MDM), identity, and endpoint security with a broad developer surface: the modern Jamf Pro API (OpenAPI 3.0, bearer-token and OAuth client-credential API Roles & Clients), the long-standing Classic API (/JSSResource, XML/JSON), the new unified Platform API Gateway (Blueprints, Compliance Benchmarks, Device Management Actions), plus the Jamf School, Jamf Protect, and Jamf Security APIs. Jamf publishes an llms.txt developer index, a hosted MCP server for documentation and code generation, a webhooks event catalog, and a trust center enumerating SOC 2, ISO 27001/27701, PCI DSS, HIPAA, GDPR, and NIST 800-53 posture.
 
-Backed by: battery-ventures
+**Areas:** Company · Apple Device Management · MDM · Endpoint Security · Mobile Device Management · IT Operations · Identity · Compliance · Developer Tools · Enterprise
+
+## JAMF on APIs.io
+
+Everything profiled for JAMF is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/jamf/](https://apis.io/providers/jamf/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [Jamf Pro API](https://apis.io/apis/jamf/jamf-pro-api/) — The modern Jamf Pro API, built on the OpenAPI 3.0 standard, for programmatically managing computers, mobile devices, policies, groups, inventory, and…
+- [Jamf Pro Classic API](https://apis.io/apis/jamf/jamf-pro-classic-api/) — The long-standing Classic API, the original resource for programmatically interacting with Jamf Pro, located at /JSSResource on each instance. Supports XML…
+- [Jamf Platform API Gateway](https://apis.io/apis/jamf/jamf-platform-api-gateway/) — A single, unified gateway to access any combination of Jamf APIs — Blueprints, Compliance Benchmarks, Device Management Actions, Declaration Reporting,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Jamf Webhooks](https://apis.io/asyncapis/jamf/jamf-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [jamf-developer](https://apis.io/servers/jamf/jamf-developer/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Jamf Authentication](https://apis.io/security/jamf/jamf-authentication/)
+- [Jamf Domain Security](https://apis.io/security/jamf/jamf-domain-security/)
+- [Jamf Trust Center](https://apis.io/security/jamf/jamf-trust-center/)
+- [Jamf Vulnerability Disclosure](https://apis.io/security/jamf/jamf-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.jamf.com/)
+- [Documentation](https://developer.jamf.com/jamf-pro/docs)
+- [Getting started](https://developer.jamf.com/developer-guide)
+- [API reference](https://developer.jamf.com/jamf-pro/reference/jamf-pro-api)
+- [Pricing](https://www.jamf.com/pricing/)
+- [Sign up](https://www.jamf.com/request-trial/)
+- [Support](https://www.jamf.com/support/)
+- [Changelog](https://developer.jamf.com/jamf-pro/changelog)
+- [Blog](https://www.jamf.com/blog/)
+- [Security](https://www.jamf.com/trust-center/vulnerability-disclosure/)
+- [Terms of service](https://www.jamf.com/terms-of-use/)
+- [Privacy policy](https://www.jamf.com/trust-center/privacy/)
+- [GitHub](https://github.com/jamf)
+- [Status](https://status.jamf.com/)
+
+## API Evangelist rating
+
+**Kin Score 50.5** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 80.0 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 52.6 |
+| Developer ergonomics | 42.9 |
+| Access clarity | 60.5 |
+
+**Agent readiness 24.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/jamf/](https://apis.io/providers/jamf/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for JAMF: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/jamf/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
